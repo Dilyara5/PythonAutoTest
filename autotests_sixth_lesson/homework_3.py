@@ -21,10 +21,6 @@ try:
     page.click("#j_idt87\:multiple")
     page.wait_for_timeout(1000)
 
-    # Получаем все значения
-    text_content = page.locator("#j_idt87\:multiple").text_content()
-    page.wait_for_timeout(1000)
-
     # Проверка текста London
     locator = page.locator("#j_idt87\:multiple")
     expect(locator).to_contain_text("London")
